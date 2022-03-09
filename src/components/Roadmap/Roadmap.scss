@@ -1,0 +1,96 @@
+$pink-mode: #e238a2;
+$blue-mode: #195fbf;
+.roadmap {
+   background-image: url(../../images/overlay.png);
+   background-size: cover;
+   background-position: center;
+   background-color: #000;
+   padding: 100px 0;
+   .header-text {
+      margin-bottom: 50px;
+      h3 {
+         color: $pink-mode;
+      }
+      h2 {
+         color: #fff;
+         margin-bottom: 50px;
+      }
+   }
+   .col-md-6 {
+      overflow: hidden;
+   }
+   .box {
+      position: relative;
+      h4 {
+         color: $pink-mode;
+      }
+      h3 {
+         color: #fff;
+         margin-bottom: 30px;
+      }
+      p {
+         color: #e5e5e5;
+         margin-bottom: 15px;
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         background: $pink-mode;
+         top: 20px;
+      }
+   }
+   .box-1,
+   .box-3 {
+      &::before {
+         left: 100px;
+      }
+   }
+   .box-2 {
+      &::before {
+         right: 100px;
+      }
+   }
+   .road-sign {
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         width: 2px;
+         height: 62.5%;
+         background: $pink-mode;
+         left: 50%;
+         top: 20px;
+      }
+   }
+}
+
+@media (max-width: 767px) {
+   .road-sign::before {
+      width: 0px !important;
+   }
+}
+
+body.dark-mode {
+   .roadmap {
+      .header-text {
+         h3 {
+            color: $blue-mode;
+         }
+      }
+      .box {
+         h4 {
+            color: $blue-mode;
+         }
+         &::before {
+            background: $blue-mode;
+         }
+      }
+      .road-sign {
+         &::before {
+            background: $blue-mode;
+         }
+      }
+   }
+}

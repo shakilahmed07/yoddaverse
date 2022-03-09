@@ -1,0 +1,53 @@
+$pink-mode: #e238a2;
+$blue-mode: #195fbf;
+.faq {
+   background-image: url(../../images/overlay.png);
+   background-size: cover;
+   background-position: center;
+   background-color: #000;
+   padding: 100px 0;
+   .header-text {
+      margin-bottom: 50px;
+      h3 {
+         color: $pink-mode;
+         span {
+            color: #fff;
+            font-size: 52px;
+         }
+      }
+   }
+   .accordion {
+      .accordion-item {
+         background: none;
+         border-bottom: 2px solid #666;
+         .accordion-header {
+            button {
+               font-size: 20px;
+               font-family: "Poppins", sans-serif;
+               color: #fff;
+               padding: 25px 30px;
+               background: none;
+               &:focus {
+                  box-shadow: 0 0 0 0rem rgb(13 110 253 / 25%);
+               }
+            }
+         }
+         .accordion-body {
+            color: #fff;
+            font-size: 16px;
+            font-weight: normal;
+            padding-left: 50px;
+         }
+      }
+   }
+}
+
+body.dark-mode {
+   .faq {
+      .header-text {
+         h3 {
+            color: $blue-mode;
+         }
+      }
+   }
+}

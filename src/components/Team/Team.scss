@@ -1,0 +1,104 @@
+$pink-mode: #e238a2;
+$blue-mode: #195fbf;
+.team {
+   background-image: url(../../images/overlay.png);
+   background-size: cover;
+   background-position: center;
+   background-color: #000;
+   padding: 100px 0;
+   .header-text {
+      margin-bottom: 50px;
+      h2,
+      h3 {
+         color: #fff;
+      }
+      p {
+         margin-top: 30px;
+         color: #e5e5e5;
+         font-size: 18px;
+      }
+   }
+   .slider-content {
+      display: flex;
+      align-items: center;
+      .img-box {
+         width: 50%;
+         text-align: center;
+      }
+      .info {
+         width: 50%;
+         h3 {
+            color: #fff;
+         }
+         .title {
+            color: $pink-mode;
+            margin-bottom: 30px;
+         }
+         p {
+            color: #fff;
+            padding-right: 80px;
+         }
+      }
+   }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+      height: 80px;
+      width: 80px;
+      display: inline-block;
+      position: absolute;
+      z-index: 3;
+      border-radius: 50px;
+      transition: 0.4s;
+      &:hover {
+         border-radius: 50px;
+      }
+      &::before {
+         content: " ";
+         position: absolute;
+
+         background: url(../../images/prev.png);
+         background-size: cover;
+         background-position: center;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         margin: auto;
+         width: 50%;
+         height: 50%;
+      }
+   }
+   .swiper-button-next {
+      bottom: 0;
+      right: 0;
+      left: 150px;
+      margin: auto;
+      &::before {
+         background: url(../../images/next.png);
+         background-size: cover;
+         background-position: center;
+      }
+   }
+   .swiper-button-prev {
+      bottom: 0;
+      left: 50px;
+      right: 0;
+      margin: auto;
+   }
+}
+.swiper-container-3d .swiper-slide {
+   transform-style: unset !important;
+}
+
+body.dark-mode {
+   .team {
+      .slider-content {
+         .info {
+            .title {
+               color: $blue-mode;
+            }
+         }
+      }
+   }
+}

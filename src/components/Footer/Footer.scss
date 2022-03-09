@@ -1,0 +1,27 @@
+$pink-mode: #e238a2;
+$blue-mode: #195fbf;
+.footer {
+   background-image: url(../../images/overlay.png);
+   background-size: cover;
+   background-position: center;
+   background-color: #000;
+   padding-top: 100px;
+   .social-links {
+      margin-top: 50px;
+      a {
+         color: #fff;
+         font-size: 26px;
+         margin: 0 20px;
+         .icon {
+            width: 26px;
+         }
+         .insta {
+            width: 20px;
+         }
+      }
+   }
+   .bottom {
+      margin-top: 100px;
+      padding-bottom: 30px;
+   }
+}
